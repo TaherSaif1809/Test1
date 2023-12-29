@@ -12,19 +12,18 @@
     <script type="text/javascript">
         
  
-                let fr = new FileReader();
-                fr.readAsText(users.txt);
-        reader.addEventListener(
+    let fr = new FileReader();
+    
+    reader.addEventListener(
     "load",
     () => {
       // this will then display a text file
       output.innerText = reader.result;
     },
     false,
-  );
-        document.getElementById('output')
-                        .textContent = fr.result;        
-        window.alert(reader.result);
+    );
+    fr.readAsText(users.txt);
+        
                 
             
     </script>
