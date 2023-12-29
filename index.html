@@ -10,17 +10,17 @@
 
 <script>
 
-
+function findEmailByName(name) {
+  return csvData.filter(data => data.Name === name)[0].Email
+}
 
 function myFunction() {
   const csv = "Name,Email\nexampleName,example@example.com\nexampleName2,example2@example.com"
   const csvData = Papa.parse(csv, {header:true}).data
   let xyz = "qwerty";
-  function findEmailByName(name) {
-    return csvData.filter(data => data.Name === name)[0].Email
-  }
   
-  xyz = findEmailByName(exampleName2);
+  window.alert("TS Test : " + xyz);
+  xyz = findEmailByName("exampleName2");
   window.alert("TS Test : " + xyz);
   
 }
