@@ -10,20 +10,29 @@
       <input type="file" id="csvFile" accept=".csv" />
       <br />
       <input type="submit" value="Submit" />
+      <p id="textboxid"></p>
    </form>
    <script>
-      const myForm = document.getElementById("myForm");
-      const csvFile = document.getElementById("csvFile");
-      myForm.addEventListener("submit", function (e) {
-         e.preventDefault();
-         const input = 'users.txt';
-         const reader = new FileReader();
-         reader.onload = function (e) {
-            const text = e.target.result;
-            document.write(text);
-         };
-         reader.readAsText(input);
-      });
+      function getTextFromFile(fileName,callBack)
+       {
+           var file = new XMLHttpRequest();
+           file.open("GET", fileName, false);
+           file.onreadystatechange = function ()
+           {
+               if(file.readyState === 4)
+               {
+                   if(file.status === 200 || file.status == 0)
+                   {
+                       var text = file.responseText;
+                       callBack(text);
+                   }
+               }
+           }
+           file.send(null);
+       }
+      getTextFromFile("users.txt",function(text){
+        document.getElementById("textboxid").value = text;
+        });
    </script>
 </body>
 </html>
