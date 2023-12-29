@@ -14,7 +14,9 @@
  
                 let fr = new FileReader();
                 fr.readAsText('users.txt');
-                window.alert(reader.result);
+        document.getElementById('output')
+                        .textContent = fr.result;        
+        window.alert(reader.result);
                 
             
     </script>
