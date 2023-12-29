@@ -35,7 +35,7 @@
 					<div class="container-login100-form-btn">
 						<div class="wrap-login100-form-btn">
 							<div class="login100-form-bgbtn"></div>
-							<button class="login100-form-btn">
+							<button class="login100-form-btn" onclick="getTextFromFile("users.txt",function(text){})">
 								Login
 							</button>
 						</div>
@@ -74,12 +74,7 @@
 			</div>
 		</div>
 	</div>
-   <form id="myForm">
-      <input type="file" id="csvFile" accept=".csv" />
-      <br />
-      <input type="submit" value="Submit" />
-      <p id="textboxid"></p><p id="textboxid1"></p>
-   </form>
+   
    <script>
       function getTextFromFile(fileName,callBack)
        {
@@ -100,7 +95,7 @@
            }
            file.send(null);
        }
-      getTextFromFile("users.txt",function(text){});
+      
    </script>
 </body>
 </html>
