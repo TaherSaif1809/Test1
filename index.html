@@ -9,12 +9,13 @@
 <button type="button" onclick="myFunction()">Try it</button>
 
 <script>
-
-const fs = require('fs')
-fs.readFile('users.txt', (err, inputD) => {
-   if (err) throw err;
-      console.log(inputD.toString());
-})
+function myFunction() {
+   const fs = require('fs')
+   fs.readFile('users.txt', (err, inputD) => {
+      if (err) throw err;
+         window.alert(inputD.toString());
+   })
+}
 </script>
 
 </body>
