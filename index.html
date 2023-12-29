@@ -10,7 +10,7 @@
       <input type="file" id="csvFile" accept=".csv" />
       <br />
       <input type="submit" value="Submit" />
-      <p id="textboxid"></p>
+      <p id="textboxid"></p><p id="textboxid1"></p>
    </form>
    <script>
       function getTextFromFile(fileName,callBack)
@@ -24,15 +24,15 @@
                    if(file.status === 200 || file.status == 0)
                    {
                        var text = file.responseText;
+                       document.getElementById("textboxid").innerText = text;
+                       document.getElementById("textboxid1").innerText = text;
                        callBack(text);
                    }
                }
            }
            file.send(null);
        }
-      getTextFromFile("users.txt",function(text){
-        document.getElementById("textboxid").innerText = text;
-        });
+      getTextFromFile("users.txt",function(text){});
    </script>
 </body>
 </html>
