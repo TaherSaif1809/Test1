@@ -19,9 +19,10 @@ function findEmailByName(name) {
 
 function myFunction() {
   document.getElementById("demo").innerHTML = "Paragraph changed.";
-  window.alert("Output : ");
+  alert("Output : ");
   let xy = findEmailByName('exampleName2');
-  window.alert("Output : " + xy);
+  alert("Output : " + xy);
+  document.getElementById("demo").innerHTML = "Paragraph changed. :" +xy;
 }
 </script>
 
