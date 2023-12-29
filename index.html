@@ -131,7 +131,10 @@
                         var text = file.responseText;
                         document.getElementById("textboxid").innerText = text;
 			lineByLine = text.split("\n");
-			alert(lineByLine[0]); // First line
+			   for (let i = 0; i < lineByLine.length; i++) {
+				  alert(lineByLine[i]); // First line
+			   }
+			
                    }
                }
            }
