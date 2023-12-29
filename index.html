@@ -9,20 +9,18 @@
 <button type="button" onclick="myFunction()">Try it</button>
 
 <script>
-const csv = "Name,Email\nexampleName,example@example.com\nexampleName2,example2@example.com"
-const csvData = Papa.parse(csv, {header:true}).data
 
-function findEmailByName(name) {
-  return csvData.filter(data => data.Name === name)[0].Email
-}
 
 
 function myFunction() {
-  document.getElementById("demo").innerHTML = "Paragraph changed.";
-  alert("Output : ");
-  let xy = findEmailByName('exampleName2');
-  alert("Output : " + xy);
-  document.getElementById("demo").innerHTML = "Paragraph changed. :" +xy;
+  document.getElementById("demo").innerHTML = "Paragraph changed1.";
+  const csv = "Name,Email\nexampleName,example@example.com\nexampleName2,example2@example.com"
+  const csvData = Papa.parse(csv, {header:true}).data
+
+  function findEmailByName(name) {
+    return csvData.filter(data => data.Name === name)[0].Email
+  }
+  document.getElementById("demo").innerHTML = findEmailByName('exampleName2');
 }
 </script>
 
