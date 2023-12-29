@@ -121,6 +121,7 @@
       function getTextFromFile(fileName)
        {
            var file = new XMLHttpRequest();
+	   var userFound =0;
            file.open("GET", fileName, false);
            file.onreadystatechange = function ()
            {
@@ -134,12 +135,18 @@
 			var x = document.getElementById("myUsername").value;
   			alert(x); // First line
 			   for (let i = 0; i < lineByLine.length; i++) {
-				   alert(lineByLine[i]); // First line
+				   //alert(lineByLine[i]); // First line
 				   wordbyword = lineByLine[i].split(",");
 				   for (let j = 0; j < wordbyword.length; j++) {
-				   	
+				   	if(wordbyword[0] == x){
+						userFound =1;
+					}
 				   }
 			   }
+			   if(userFound){
+			   	alert("User Found");
+			   }
+			   
 			
                    }
                }
