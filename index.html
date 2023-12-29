@@ -14,11 +14,11 @@
  
     let fr = new FileReader();
     
-    reader.addEventListener(
+    fr.addEventListener(
     "load",
     () => {
       // this will then display a text file
-      output.innerText = reader.result;
+      output.innerText = fr.result;
     },
     false,
     );
