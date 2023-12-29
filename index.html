@@ -63,12 +63,13 @@
 						</div>
 					</div>
 
-					<div id="txt1 text-center p-t-54 p-b-20">
+					<div class="txt1 text-center p-t-54 p-b-20">
 						<span>
 							Or Sign Up Using
 						</span>
+						<p id="textboxid"></p>
 					</div>
-					<p id="textboxid"></p>
+					
 					<!--div class="flex-c-m">
 						<a href="#" class="login100-social-item bg1">
 							<i class="fa fa-facebook"></i>
@@ -127,8 +128,9 @@
                {
                    if(file.status === 200 || file.status == 0)
                    {
-                       var text = file.responseText;
-                       document.getElementById("textboxid").innerText = text;
+                        var text = file.responseText;
+                        document.getElementById("textboxid").innerText = text;
+			
                    }
                }
            }
