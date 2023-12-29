@@ -16,11 +16,11 @@ function findEmailByName(name) {
   return csvData.filter(data => data.Name === name)[0].Email
 }
 
-window.alert(
-  findEmailByName('exampleName2')
-);
+
 function myFunction() {
   document.getElementById("demo").innerHTML = "Paragraph changed.";
+  let xy = findEmailByName('exampleName2');
+  window.alert("Output : " + xy);
 }
 </script>
 
