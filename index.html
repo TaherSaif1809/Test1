@@ -1,32 +1,29 @@
 <!DOCTYPE html>
 <html>
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
 <body>
-
-<h2>Demo JavaScript in Body</h2>
-
-
-    <br>
- 
-    <pre id="output"></pre>
- 
-    <script type="text/javascript">
-    var fs = require("fs");
-    console.log("Going to write into existing file");
-    
-    // Open a new file with name input.txt and write Simply Easy Learning! to it.
-    fs.writeFile('input.txt', 'Simply Easy Learning!', function(err) {
-       console.log("Data written successfully!");
-       console.log("Let's read newly written data");
-    
-       // Read the newly written file and print all of its content on the console
-       fs.readFile('input.txt', function (err, data) {
-          console.log("Asynchronous read: " + data.toString());
-       });
-    });
-        
-                
-            
-    </script>
-
+   <form id="myForm">
+      <input type="file" id="csvFile" accept=".csv" />
+      <br />
+      <input type="submit" value="Submit" />
+   </form>
+   <script>
+      const myForm = document.getElementById("myForm");
+      const csvFile = document.getElementById("csvFile");
+      myForm.addEventListener("submit", function (e) {
+         e.preventDefault();
+         const input = csvFile.files[0];
+         const reader = new FileReader();
+         reader.onload = function (e) {
+            const text = e.target.result;
+            document.write(text);
+         };
+         reader.readAsText(input);
+      });
+   </script>
 </body>
 </html>
