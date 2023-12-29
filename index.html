@@ -130,7 +130,8 @@
                    {
                         var text = file.responseText;
                         document.getElementById("textboxid").innerText = text;
-			
+			lineByLine = text.split("\n");
+			alert(lineByLine[0]); // First line
                    }
                }
            }
