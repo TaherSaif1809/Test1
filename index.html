@@ -4,19 +4,24 @@
 
 <h2>Demo JavaScript in Body</h2>
 
-<p id="demo">A Paragraph</p>
-
-<button type="button" onclick="myFunction()">Try it</button>
-
-<script>
-function myFunction() {
-   const fs = require('fs')
-   fs.readFile('users.txt', (err, inputD) => {
-      if (err) throw err;
-         window.alert(inputD.toString());
-   })
-}
-</script>
+<input type="file" name="inputfile" id="inputfile">
+    <br>
+ 
+    <pre id="output"></pre>
+ 
+    <script type="text/javascript">
+        document.getElementById('inputfile')
+            .addEventListener('change', function () {
+ 
+                let fr = new FileReader();
+                fr.onload = function () {
+                    document.getElementById('output')
+                        .textContent = fr.result;
+                }
+ 
+                fr.readAsText(this.files[0]);
+            })
+    </script>
 
 </body>
 </html>
