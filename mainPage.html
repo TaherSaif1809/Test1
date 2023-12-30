@@ -115,7 +115,7 @@
 	//itsSpan.innerHTML = "ITS ID : ";	
 	document.getElementById("itsId").textContent = "ITS ID : "+its;	
 	var file = new XMLHttpRequest();
-	file.open("GET", fileName, false);
+	file.open("GET", "users.txt", false);
 	file.onreadystatechange = function ()
            {
                if(file.readyState === 4)
