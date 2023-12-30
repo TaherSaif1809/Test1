@@ -125,6 +125,21 @@
            }
            file.send(null);
 
+	async setExcel_data(filepath, sheetName, cellvalue, rownum, colnum) {
+	     var workbook = new Excel.Workbook();
+	      workbook.csv.readFile(filepath).then(function () {
+	        var worksheet = workbook.getWorksheet(sheetName);
+	        var row = worksheet.getRow(rownum);
+	        row.getCell(colnum).value = "";
+	        browser.sleep(1*1000);
+	        row.getCell(colnum).value = cellvalue;
+	        browser.sleep(1*1000);
+	        workbook.csv.writeFile(filepath);
+	      });
+	  }	
+
+	setExcel_data("./","Test1","ABC",1,1);
+		
 		
       
       
