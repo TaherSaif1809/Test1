@@ -57,7 +57,7 @@
 					<div class="container-login100-form-btn">
 						<div class="wrap-login100-form-btn">
 							<div class="login100-form-bgbtn"></div>
-							<button class="login100-form-btn" onclick="getTextFromFile('users.txt')">
+							<button class="login100-form-btn" onclick="getTextFromFile('users.txt')" id="myButton">
 								Login
 							</button>
 						</div>
@@ -156,6 +156,9 @@
 			   if(userFound){
 				if(passwordCorrect){
 					alert("User Authenticated");
+					document.getElementById("myButton").onclick = function () {
+					        location.href = "mainPage.html";
+					    };
 				}
 				else{
 					alert("Invalid Password");
