@@ -93,6 +93,7 @@
 	//itsSpan.innerHTML = "ITS ID : ";	
 	document.getElementById("itsId").textContent = "ITS ID : "+its;	
 	var file = new XMLHttpRequest();
+	var userFound = 0;	
 	file.open("GET", "users.txt", false);
 	file.onreadystatechange = function ()
            {
