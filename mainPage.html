@@ -85,10 +85,8 @@
    
 	
 	<script>
-	alert(window.location.href);
 	let url = new URL(window.location.href);
 	let searchParams = new URLSearchParams(url.search);
-	alert(searchParams.get('its'));  // outputs "m2-m3-m4-m5"	
 	let its = searchParams.get('its');	
 	let itsSpan = document.getElementById("itsId");
 	//itsSpan.innerText  = "ITS ID : ";
