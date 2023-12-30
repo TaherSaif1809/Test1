@@ -156,9 +156,8 @@
 			   if(userFound){
 				if(passwordCorrect){
 					alert("User Authenticated");
-					document.getElementById("myButton").onclick = function () {
-					        location.href = "mainPage.html";
-					    };
+					window.location.href="mainPage.html";
+					
 				}
 				else{
 					alert("Invalid Password");
