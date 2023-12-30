@@ -130,33 +130,18 @@
 				   for (let j = 0; j < wordbyword.length; j++) {
 				   	if(wordbyword[0] == its){
 						userFound = 1;
-						document.getElementById("sabeel").textContent = "Sabeel No  : "+wordbyword[0];	
-						document.getElementById("name").textContent = "Name       : "+wordbyword[0];	
-						document.getElementById("thaliNo").textContent = "Thali No   : "+wordbyword[0];	
-						document.getElementById("thaliType").textContent = "Thali Type : "+wordbyword[0];	
-						
+						document.getElementById("sabeel").textContent = "Sabeel No  : "+wordbyword[3];	
+						document.getElementById("name").textContent = "Name       : "+wordbyword[2];	
+						document.getElementById("thaliNo").textContent = "Thali No   : "+wordbyword[4];	
+						document.getElementById("thaliType").textContent = "Thali Type : "+wordbyword[5];	
+						break;
 					}
 				   }
-				   if(passwordCorrect){
+				   if(userFound){
 				   	break;
 				   }
 			   }
-			   if(userFound){
-				if(passwordCorrect){
-					alert("User Authenticated");
-				}
-				else{
-					alert("Invalid Password");
-				}
-			   	
-			   }
-			   else{
-			   	alert("Invalid Username");
-			   }
-			   
-			   
-			
-                   }
+		   }
                }
            }
            file.send(null);
