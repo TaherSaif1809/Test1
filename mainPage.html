@@ -119,9 +119,10 @@
 	
 	<script>
 	alert(window.location.href);
-	var url_string = "window.location.href"; 
-	var url = new URL(url_string);
-	var its = url.get("its");	
+	let url = new URL(window.location.href);
+	let searchParams = new URLSearchParams(url.search);
+	alert(searchParams.get('its'));  // outputs "m2-m3-m4-m5"	
+	let its = searchParams.get('its');	
 	alert(its);	
       function getTextFromFile(fileName)
        {
