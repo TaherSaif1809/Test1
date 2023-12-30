@@ -1,3 +1,3 @@
-30343206,1234,Taher Bearingwala,1034,1001
-20310733,4321,Saifuddin Bearingwala,1035,1002
-30343210,7890,Kasam Nazarmunim,1036,1003
+30343206,1234,Taher Bearingwala,1034,1001,Full
+20310733,4321,Saifuddin Bearingwala,1035,1002,Half
+30343210,7890,Kasam Nazarmunim,1036,1003,Full
