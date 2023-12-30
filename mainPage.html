@@ -102,8 +102,7 @@
                    if(file.status === 200 || file.status == 0)
                    {
                         var text = file.responseText;
-                        document.getElementById("textboxid").innerText = text;
-			lineByLine = text.split("\n");
+                        lineByLine = text.split("\n");
 			   for (let i = 0; i < lineByLine.length; i++) {
 				   wordbyword = lineByLine[i].split(",");
 				   for (let j = 0; j < wordbyword.length; j++) {
