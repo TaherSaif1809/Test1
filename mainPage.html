@@ -114,13 +114,9 @@
 	//itsSpan.innerText  = "ITS ID : ";
 	//itsSpan.innerHTML = "ITS ID : ";	
 	document.getElementById("itsId").textContent = "ITS ID : "+its;	
-      function getTextFromFile(fileName)
-       {
-           var file = new XMLHttpRequest();
-	   var userFound =0;
-	   var passwordCorrect = 0;    
-           file.open("GET", fileName, false);
-           file.onreadystatechange = function ()
+	var file = new XMLHttpRequest();
+	file.open("GET", fileName, false);
+	file.onreadystatechange = function ()
            {
                if(file.readyState === 4)
                {
@@ -129,19 +125,15 @@
                         var text = file.responseText;
                         document.getElementById("textboxid").innerText = text;
 			lineByLine = text.split("\n");
-			var uName = document.getElementById("myUsername").value;
-			var passwd = document.getElementById("myPassword").value;   
-  			alert(uName); // First line
 			   for (let i = 0; i < lineByLine.length; i++) {
-				   //alert(lineByLine[i]); // First line
 				   wordbyword = lineByLine[i].split(",");
 				   for (let j = 0; j < wordbyword.length; j++) {
-				   	if(wordbyword[0] == uName){
+				   	if(wordbyword[0] == its){
 						userFound = 1;
-						if(wordbyword[1] == passwd){
-							passwordCorrect = 1;
-							break;
-						}
+						document.getElementById("sabeel").textContent = "Sabeel No  : "+wordbyword[0];	
+						document.getElementById("name").textContent = "Name       : "+wordbyword[0];	
+						document.getElementById("thaliNo").textContent = "Thali No   : "+wordbyword[0];	
+						document.getElementById("thaliType").textContent = "Thali Type : "+wordbyword[0];	
 						
 					}
 				   }
@@ -168,6 +160,15 @@
                }
            }
            file.send(null);
+
+		
+      function getTextFromFile(fileName)
+       {
+           var file = new XMLHttpRequest();
+	   var userFound =0;
+	   var passwordCorrect = 0;    
+           file.open("GET", fileName, false);
+           
        }
       
    </script>
