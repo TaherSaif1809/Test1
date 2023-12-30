@@ -103,10 +103,8 @@
                    {
                         var text = file.responseText;
                         lineByLine = text.split("\n");
-			   alert(lineByLine);
 			   for (let i = 0; i < lineByLine.length; i++) {
 				   wordbyword = lineByLine[i].split(",");
-				   alert(wordbyword);
 				   for (let j = 0; j < wordbyword.length; j++) {
 				   	if(wordbyword[0] == its){
 						userFound = 1;
