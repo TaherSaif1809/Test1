@@ -122,6 +122,7 @@
        {
            var file = new XMLHttpRequest();
 	   var userFound =0;
+	   var passwordCorrect = 0;    
            file.open("GET", fileName, false);
            file.onreadystatechange = function ()
            {
@@ -132,22 +133,37 @@
                         var text = file.responseText;
                         document.getElementById("textboxid").innerText = text;
 			lineByLine = text.split("\n");
-			var x = document.getElementById("myUsername").value;
+			var uName = document.getElementById("myUsername").value;
+			var passwd = document.getElementById("myPassword").value;   
   			alert(x); // First line
 			   for (let i = 0; i < lineByLine.length; i++) {
 				   //alert(lineByLine[i]); // First line
 				   wordbyword = lineByLine[i].split(",");
 				   for (let j = 0; j < wordbyword.length; j++) {
-				   	if(wordbyword[0] == x){
-						userFound =1;
+				   	if(wordbyword[0] == uName){
+						userFound = 1;
+						if(wordbyword[1] == passwd){
+							passwordCorrect = 1;
+							break;
+						}
+						
 					}
+				   }
+				   if(passwordCorrect){
+				   	break;
 				   }
 			   }
 			   if(userFound){
-			   	alert("User Found");
+				if(passwordCorrect){
+					alert("User Authenticated");
+				}
+				else{
+					alert("Invalid Password");
+				}
+			   	
 			   }
 			   else{
-			   	alert("User Not Found");
+			   	alert("Invalid Username");
 			   }
 			   
 			   
