@@ -135,8 +135,7 @@
 			lineByLine = text.split("\n");
 			var uName = document.getElementById("myUsername").value;
 			var passwd = document.getElementById("myPassword").value;   
-  			alert(uName); // First line
-			   for (let i = 0; i < lineByLine.length; i++) {
+  			   for (let i = 0; i < lineByLine.length; i++) {
 				   //alert(lineByLine[i]); // First line
 				   wordbyword = lineByLine[i].split(",");
 				   for (let j = 0; j < wordbyword.length; j++) {
@@ -155,7 +154,6 @@
 			   }
 			   if(userFound){
 				if(passwordCorrect){
-					alert("User Authenticated");
 					//window.open("https://tahersaif1809.github.io/Test1/mainPage.html");
 					window.open("mainPage.html?its="+uName);
 					
