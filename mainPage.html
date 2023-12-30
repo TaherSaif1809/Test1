@@ -119,6 +119,10 @@
 	
 	<script>
 	alert(window.location.href);
+	var url_string = "window.location.href"; 
+	var url = new URL(url_string);
+	var its = url.searchParams.get("its");	
+	alert(its);	
       function getTextFromFile(fileName)
        {
            var file = new XMLHttpRequest();
