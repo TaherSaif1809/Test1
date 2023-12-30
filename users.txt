@@ -2,6 +2,4 @@
 20310733,4321,Saifuddin Bearingwala,1035,1002,Half
 30347159,7159,Taher Bhai Badri,1037,1004,Full
 30343210,7890,Kasam Nazarmunim,1036,1003,Full
-30347159,30347159,Taher Bhai Badri,1037,1004,Full
-30347159,30347159,Taher Bhai Badri,1037,1004,Full
-30347159,30347159,Taher Bhai Badri,1037,1004,Full
+q,q,q,q,q,q
