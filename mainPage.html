@@ -47,12 +47,12 @@
 					<br><br>
 					<span id="comment">Additional Comments</span>
 					<br><br>
-					<textarea rows="5" cols="50" name="comment" placeholder="Type your comment here" style="background-color:#ffffff"></textarea>
+					<textarea rows="5" cols="50" name="comment" placeholder="Type your comment here" style="background-color:#ccccff"></textarea>
 					<br><br>
 					<div class="container-login100-form-btn">
 						<div class="wrap-login100-form-btn">
 							<div class="login100-form-bgbtn"></div>
-							<button class="login100-form-btn" onclick="getTextFromFile('users.txt')">
+							<button class="login100-form-btn">
 								Submit
 							</button>
 						</div>
@@ -126,14 +126,7 @@
            file.send(null);
 
 		
-      function getTextFromFile(fileName)
-       {
-           var file = new XMLHttpRequest();
-	   var userFound =0;
-	   var passwordCorrect = 0;    
-           file.open("GET", fileName, false);
-           
-       }
+      
       
    </script>
 </body>
