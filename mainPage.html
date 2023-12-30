@@ -123,7 +123,10 @@
 	let searchParams = new URLSearchParams(url.search);
 	alert(searchParams.get('its'));  // outputs "m2-m3-m4-m5"	
 	let its = searchParams.get('its');	
-	document.getElementById("itsId").textContent = "ITS ID : "+its;	
+	let itsSpan = document.getElementById("itsId");
+	itsSpan.textContent = "ITS ID : "+its;
+	itsSpan.innerHTML = "ITS ID : "+its;	
+	//document.getElementById("itsId").textContent = "ITS ID : "+its;	
       function getTextFromFile(fileName)
        {
            var file = new XMLHttpRequest();
