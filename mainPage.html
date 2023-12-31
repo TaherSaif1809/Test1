@@ -126,7 +126,22 @@
            }
            file.send(null);
 
-		
+		   const data = [
+				['Name', 'Age', 'Country'],
+				['John Doe', 30, 'USA'],
+				['Alice Smith', 28, 'Canada'],
+				['Bob Johnson', 35, 'UK']
+				// Add more rows as needed
+			];
+
+			const ws = XLSX.utils.aoa_to_sheet(data);
+			const wb = XLSX.utils.book_new();
+			XLSX.utils.book_append_sheet(wb, ws, 'Sheet1');
+
+			/* Generate Excel file and initiate download */
+			const wbout = XLSX.write(wb, { bookType: 'xlsx', type: 'array' });
+			saveAs(new Blob([wbout], { type: 'application/octet-stream' }), 'data.xlsx');
+			
 		
       
       
